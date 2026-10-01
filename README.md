@@ -1,3 +1,5 @@
+Archived version. Development continues at [mashud37/pepa-workers/](https://github.com/mashud37/pepa-workers).
+
 # pepa-read
 
 The task that pepa-read fulfiles is reltated to how Windows File Explorer search cannot keep up once the pepa-prep extracted text and pepa-sum summaries run into thousands of markdown files. Hunting for a paper by author, argument, or method becomes a matter of luck. pepa-read answers with a small SQLite full-text index, ranked by BM25, built once and queried instantly, then exposes it through a local web UI with one-click open in the file's default Windows app, plus a one-shot search command for scripting. It is read-only with respect to the source corpus, never writing to pepa-prep or pepa-sum output, and it makes no LLM or network calls. Everything runs on `127.0.0.1`, so nothing leaves the machine except its own SQLite index. That index also holds user-curated literature lists, so results can be organised while reading and exported as input to pepa-review.
